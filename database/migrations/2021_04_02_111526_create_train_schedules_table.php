@@ -19,8 +19,6 @@ class CreateTrainSchedulesTable extends Migration
             $table->time('departure');
             $table->time('arrivalTime');
             $table->float('ticketPrice');
-            $table->timestamps();
-            
         });
     }
 

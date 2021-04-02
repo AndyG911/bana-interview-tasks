@@ -18,10 +18,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/trainSchedules',[TrainScheduleController::class,'index']);
-    Route::prefix('/trainSchedule')->group(function (){
+    Route::prefix('/trainSchedule')->group(function(){
         Route::post('/store',[TrainScheduleController::class ,'store']);
         Route::put('/{id}',[TrainScheduleController::class, 'update']);
-        Route::delete('/{id}',[TrainScheduleController::class, 'destroy']);
+        Route::delete('/{id}',[TrainScheduleController::class, 'delete']);
     }
 );
 
